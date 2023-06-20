@@ -3,14 +3,17 @@ const cors = require("cors");
 
 class Server {
   constructor() {
-    this.app = express();
-    this.port = process.env.PORT;
-    this.usuariosPath = "/api/usuarios";
-    //Middelware
-    this.middlewares();
-    //Rutas de la aplicacion
-    this.routes();
-  }
+        this.app = express();
+        this.port = process.env.PORT || 3000;
+        this.usuariosPath = '/api/usuarios';
+        //Middelware
+        this.middlewares();
+        //Rutas de la aplicacion
+        this.routes();
+        
+
+    }
+
 
   //aque se define el metodo middleware que publicara la carpeta public
   middlewares() {
